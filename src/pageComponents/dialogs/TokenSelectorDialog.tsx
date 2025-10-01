@@ -16,7 +16,7 @@ import {
 import { SplToken } from '@/application/token/type'
 import useToken, { SupportedTokenListSettingName } from '@/application/token/useToken'
 import { createSplToken } from '@/application/token/useTokenListsLoader'
-import { HonkMint, USDCMint, USDTMint } from '@/application/token/wellknownToken.config'
+import { USDCMint, USDTMint } from '@/application/token/wellknownToken.config'
 import useWallet from '@/application/wallet/useWallet'
 import { AddressItem } from '@/components/AddressItem'
 import { Token2022Badge } from '@/components/Badge'
@@ -316,7 +316,7 @@ function TokenSelectorDialogContent({
             <div className="text-xs font-medium text-[rgba(171,196,255,.5)] my-3">Popular tokens</div>
 
             <Row className="justify-between">
-              {([HonkMint, QuantumSOLVersionSOL, USDTMint, USDCMint] as const).map((mintish, idx) => {
+              {([QuantumSOLVersionSOL, USDTMint, USDCMint] as const).map((mintish, idx) => {
                 const token = isQuantumSOL(mintish) ? QuantumSOLVersionSOL : getToken(mintish)
                 return (
                   <Row

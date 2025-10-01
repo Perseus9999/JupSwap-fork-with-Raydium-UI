@@ -11,15 +11,6 @@
       "hasFreeze": 0
     },
     {
-      "symbol": "Honk",
-      "name": "Honk",
-      "mint": "3ag1Mj9AKz9FAkCQ6gAEhpLSX8B2pUbPdkb9iBsDLZNB",
-      "decimals": 9,
-      "extensions": {},
-      "icon": "/logo/logo.png",
-      "hasFreeze": 0
-    },
-    {
       "symbol": "USDC",
       "name": "USD Coin",
       "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",

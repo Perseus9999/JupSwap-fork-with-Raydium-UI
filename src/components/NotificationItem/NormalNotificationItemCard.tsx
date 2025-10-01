@@ -7,7 +7,7 @@ import Row from '../Row'
 import { spawnTimeoutControllers, TimeoutController } from './utils'
 import { NormalNotificationItemInfo } from './type'
 
-const existMs = process.env.NODE_ENV === 'development' ? 2 * 60 * 1000 : 4 * 1000 // (ms)
+const existMs = process.env.NODE_ENV === 'development' ? 6 * 1000 : 3 * 1000 // (ms)
 
 const colors: Record<
   NormalNotificationItemInfo['type'] & string,

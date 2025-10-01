@@ -3,7 +3,6 @@ import { PublicKey } from '@solana/web3.js'
 import { WSOLMint } from './quantumSOL'
 
 export const RAYMint = toPub('4k3Dyjzvzp8eMZWUXbBCjEvwSkkk59S5iCNLY3QrkX6R')
-export const HonkMint = toPub('3ag1Mj9AKz9FAkCQ6gAEhpLSX8B2pUbPdkb9iBsDLZNB')
 export const PAIMint = toPub('Ea5SjE2Y6yvCeW5dYTn7PYMuW5ikXkvbGdcmSnXeaLjS')
 export const SRMMint = toPub('SRMuApVNdxXokk5GT7XD5cUUgXMBCoAz2LHeuAoKWRt')
 export const USDCMint = toPub('EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v')
@@ -23,7 +22,6 @@ export const routeMiddleMints = {
   USDT: toPubString(USDTMint),
   USDC: toPubString(USDCMint),
   RAY: toPubString(RAYMint),
-  Honk: toPubString(HonkMint),
   WSOL: toPubString(WSOLMint),
   SRM: toPubString(SRMMint),
   PAI: toPubString(PAIMint),

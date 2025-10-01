@@ -131,10 +131,11 @@ export default function PageLayout(props: {
         // always occupy scrollbar space
         className="flex flex-col PageLayoutContent relative grid-area-c mobile:rounded-none"
         style={{
-          backgroundImage: 'url(/backgroundImages/HomeHeroBackground.jpg)',
+          backgroundSize: '100%',
+          // backgroundImage: 'url(/backgroundImages/jupiter-swap-bg.png)',
           overflowX: 'hidden',
           overflowY: 'scroll',
-          // background: 'linear-gradient(139.73deg,#193357,#000 98%)'
+          background: 'linear-gradient(139.73deg,#193357,#000 98%)'
         }}
       >
         {props.contentBanner}
@@ -441,7 +442,7 @@ function Navbar({
       <Link href="/swap">
         <Image
           className={`cursor-pointer ${inDev ? 'hue-rotate-60' : ''} mobile:hidden`}
-          src="/logo/logo-with-text.png"
+          src="/logo/logo-only-icon.svg"
         />
       </Link>
       <Row className='w-full items-start justify-start ml-4'>
@@ -483,7 +484,7 @@ function Navbar({
         )
       ) : (
         <Link className="place-self-center" href="/swap">
-          <Image className="cursor-pointer" src="/logo/logo.png" />
+          <Image className="cursor-pointer" src="/logo/logo-only-icon.svg" />
         </Link>
       )}
 
@@ -614,7 +615,7 @@ function SideMenu({ className, onClickCloseBtn }: { className?: string; onClickC
         {isMobile && (
           <Row className="items-center justify-between p-6 mobile:p-4 mobile:pl-8">
             <Link href="/swap">
-              <Image src="/logo/logo-with-text.png" className={`mobile:scale-75 ${inDev ? 'hue-rotate-60' : ''}`} />
+              <Image src="/logo/logo-only-icon.svg" className={`mobile:scale-75 ${inDev ? 'hue-rotate-60' : ''}`} />
             </Link>
             <Icon
               size={isMobile ? 'sm' : 'md'}

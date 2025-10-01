@@ -3,7 +3,7 @@ import { create } from 'zustand'
 import { ApiConfig } from './apiUrl.config'
 import { getLocalItem } from '@/functions/dom/jStorage'
 
-export const DEFAULT_URL_ENDPOINT = 'https://mainnet.helius-rpc.com/?api-key=adc663bb-97bb-4c4f-ae20-b8a5060e56b6'
+export const DEFAULT_URL_ENDPOINT = 'https://mainnet.helius-rpc.com/?api-key=157c0fb4-b7d6-4c4d-8441-b250ade209c6'
 export type AppAdvancedSettingsStore = {
   mode: 'mainnet' | 'devnet'
   programIds: typeof MAINNET_PROGRAM_ID

@@ -16,7 +16,7 @@ import { spawnTimeoutControllers, TimeoutController } from './utils'
 import useWallet from '@/application/wallet/useWallet'
 import SquadsEmbeddedWalletAdapter from '../SolanaWallets/SquadsMultisig'
 
-const existMs = process.env.NODE_ENV === 'development' ? 6 * 1000 : 3 * 1000 // (ms)
+const existMs = process.env.NEXT_PUBLIC_NODE_ENV === 'development' ? 6 * 1000 : 3 * 1000 // (ms)
 
 const colors = {
   success: {

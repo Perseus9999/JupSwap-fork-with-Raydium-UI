@@ -1277,10 +1277,9 @@ function KLineChartItem({
           <Col className="items-end mobile:items-center mobile:justify-self-center mobile:ml-0 grow">
             <div className="text-xs font-medium text-[rgba(171,196,255,0.5)]">Price</div>
             <div className="text-sm font-medium text-[#abc4ff] whitespace-nowrap">
-              {'$' +
-                formatNumber(tokenPrices?.toFixed(lt(tokenPrices, 0.1) ? coin?.decimals ?? 4 : 2), {
-                  fractionLength: 'auto'
-                }) ?? '--'}
+              {'$' + formatNumber(tokenPrices?.toFixed(lt(tokenPrices, 0.1) ? coin?.decimals ?? 4 : 2), {
+                fractionLength: 'auto'
+              })}
             </div>
           </Col>
 

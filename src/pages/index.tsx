@@ -1265,7 +1265,7 @@ function KLineChartItem({
               {'$' +
                 formatNumber(tokenPrices?.toFixed(lt(tokenPrices, 0.1) ? coin?.decimals ?? 4 : 2), {
                   fractionLength: 'auto'
-                }) ?? '--'}
+                })}
             </div>
           </Col>
 

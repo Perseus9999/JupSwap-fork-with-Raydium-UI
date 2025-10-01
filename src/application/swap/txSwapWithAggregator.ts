@@ -28,12 +28,6 @@ interface QuoteResponse {
   outAmount: string;
 }
 
-// export const AGGREGATE_SWAP_QUOTE_ENDPOINT = "https://quote-api.jup.ag/v6/quote"
-// export const AGGREGATE_SWAP_ENDPOINT = "https://quote-api.jup.ag/v6/swap"
-// export const AGGREGATE_SWAP_ENDPOINT = "https://station.jup.ag/v6/swap"
-
-//add new api for fee test
-
 export const AGGREGATE_SWAP_QUOTE_ENDPOINT = "https://lite-api.jup.ag/swap/v1/quote";
 export const AGGREGATE_SWAP_ENDPOINT = "https://quote-api.jup.ag/v6/swap"
 

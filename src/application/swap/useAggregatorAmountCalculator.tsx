@@ -176,7 +176,7 @@ export function useAggregatorAmountCalculator() {
   ])
 }
 
-export const GET_QUOTE_ENDPOINT = "https://quote-api.jup.ag/v6/quote"
+export const GET_QUOTE_ENDPOINT = "https://lite-api.jup.ag/swap/v1/quote"
 
 type QUOTE_RESPONSE = {
   inputMint: string

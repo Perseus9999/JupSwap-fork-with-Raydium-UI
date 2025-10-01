@@ -155,9 +155,6 @@ export function useAggregatorAmountCalculator() {
     { debouncedOptions: { delay: 300 } }
   )
 
-  // if don't check focusSideCoin, it will calc twice.
-  // one for coin1Amount then it will change coin2Amount
-  // changing coin2Amount will cause another calc
   useIdleEffect(() => {
     useAggregator.setState({ isCalculating: true })
     startCalc()

@@ -29,9 +29,6 @@ interface QuoteResponse {
 }
 
 export const AGGREGATE_SWAP_QUOTE_ENDPOINT = "https://lite-api.jup.ag/swap/v1/quote";
-export const AGGREGATE_SWAP_ENDPOINT = "https://quote-api.jup.ag/v6/swap"
-
-//end
 
 export async function getQuote(_inputMint: string | PublicKey, _outputMint: string | PublicKey, _amount: string, _slippageBps: Numberish | undefined) {
   try {
@@ -196,48 +193,7 @@ export default async function txSwapWithAggregator() {
 
     const serializedSignedTransaction = signedTransaction.serialize();
 
-    const signature = await connection.sendRawTransaction(serializedSignedTransaction, {
-      skipPreflight: false,
-      preflightCommitment: 'confirmed',
-      maxRetries: 3
-    });
-
-    // const swapData = JSON.stringify({
-    //   "userPublicKey": toPubString(owner),
-    //   "wrapAndUnwrapSol": true,
-    //   "useSharedAccounts": true,
-    //   "dynamicComputeUnitLimit": true,
-    //   "skipUserAccountsRpcCalls": true,
-    //   "quoteResponse": {
-    //     "inputMint": upCoin.mint,
-    //     "inAmount": parseInt((parseFloat(upCoinAmount.toString()) * Math.pow(10, upCoin.decimals)).toString()).toString(),
-    //     "outputMint": downCoin.mint,
-    //     "outAmount": parseInt((parseFloat(downCoinAmount.toString()) * Math.pow(10, downCoin.decimals)).toString()).toString(),
-    //     "otherAmountThreshold": otherAmountThreshold,
-    //     "swapMode": "ExactIn",
-    //     "slippageBps": slippageBps,
-    //     "priceImpactPct": priceImpact,
-    //     "routePlan": routePlan,
-    //   }
-    // });
-
-    // const config = {
-    //   method: 'post',
-    //   maxBodyLength: Infinity,
-    //   headers: {
-    //     'Content-Type': 'application/json',
-    //     'Accept': 'application/json'
-    //   },
-    //   body: swapData
-    // };
-
-    // const { swapTransaction } = await (
-    //   await fetch(AGGREGATE_SWAP_ENDPOINT, config)
-    // ).json();
-
-    // // deserialize the transaction
-    // const swapTransactionBuf = Buffer.from(swapTransaction, 'base64');
-    // const transaction = VersionedTransaction.deserialize(swapTransactionBuf);
+    const signature = await connection.sendRawTransaction(serializedSignedTransaction, { skipPreflight: true });
 
     transactionCollector.add(deserializedTransaction, {
       txHistoryInfo: {

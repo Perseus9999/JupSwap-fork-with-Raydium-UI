@@ -146,7 +146,7 @@ You can now cast votes for this proposal on the Squads app.`
   return (
     <Card
       domRef={itemRef}
-      className={`min-w-[260px] relative rounded-xl ring-1.5 ring-inset ${colors[wholeItemState].ring} bg-[#299b57] p-6 py-5 mx-4 my-2 overflow-hidden pointer-events-auto transition`}
+      className={`min-w-[260px] relative rounded-xl ring-1.5 ring-inset ${colors[wholeItemState].ring} bg-[#071f2d] p-6 py-5 mx-4 my-2 overflow-hidden pointer-events-auto transition`}
     >
       {/* timeline */}
       <div className="h-1 absolute top-0 left-0 right-0">
